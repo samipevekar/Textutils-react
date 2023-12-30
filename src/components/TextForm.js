@@ -53,12 +53,12 @@ export default function TextForm(props) {
         <textarea className="form-control" id="mybox" rows="10" value={text} placeholder='Enter your text' onChange={handleOnChange} ></textarea>
     </div>
 
-        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleUpClick}>CONVERT TO UPPERCASE</button>
-        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleLowClick}>covert to lowercase</button>
-        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleSentClick}>Covert To Titlecase</button>
-        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleCopyClick}>Copy To Clipboard</button>
-        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleExtraClick}>Remove Extra Spaces</button>
-        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleClear}>Clear Text</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleUpClick} style={{boxShadow:"0px 0px 10px black"}}>CONVERT TO UPPERCASE</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleLowClick} style={{boxShadow:"0px 0px 10px black"}}>covert to lowercase</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleSentClick} style={{boxShadow:"0px 0px 10px black"}}>Covert To Titlecase</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleCopyClick} style={{boxShadow:"0px 0px 10px black"}}>Copy To Clipboard</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleExtraClick} style={{boxShadow:"0px 0px 10px black"}}>Remove Extra Spaces</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleClear} style={{boxShadow:"0px 0px 10px black"}}>Clear Text</button>
 
     </div>
     <div className="container my-3" style={{color:props.mode === 'dark'? "white":"#042743"}}>

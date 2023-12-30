@@ -20,10 +20,15 @@ export default function Navbar({ title, aboutText, mode, toggleMode }) {
               <Link className={`nav-link text-${mode === 'light' ? "dark" : "light"}`} to="/about">{aboutText}</Link>
             </li>
           </ul>
-          <div className={`form-check form-switch text-${mode === 'light' ? "dark" : "light"}`}>
-            <input className="form-check-input" type="checkbox" onClick={toggleMode} role="switch" id="flexSwitchCheckDefault" />
-            <label className="form-check-label text-gray" htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
+          <div className="d-flex">
+            <div className="bg-primary rounder mx-2" onClick={()=>{toggleMode('primary')}} style={{height:"30px",width:"30px",cursor:"pointer"}}></div>
+            <div className="bg-danger rounder mx-2" onClick={()=>{toggleMode('danger')}} style={{height:"30px",width:"30px",cursor:"pointer"}}></div>
+            <div className="bg-success rounder mx-2" onClick={()=>{toggleMode('success')}} style={{height:"30px",width:"30px",cursor:"pointer"}}></div>
+            <div className="bg-warning rounder mx-2" onClick={()=>{toggleMode('warning')}} style={{height:"30px",width:"30px",cursor:"pointer"}}></div>
+            <div className="bg-dark rounder mx-2" onClick={()=>{toggleMode('dark')}} style={{height:"30px",width:"30px",cursor:"pointer"}}></div>
+            <div className="bg-light rounder mx-2" onClick={()=>{toggleMode('light')}} style={{height:"30px",width:"30px",cursor:"pointer"}}></div>
           </div>
+          
         </div>
       </div>
     </nav>
