@@ -24,18 +24,8 @@ function App() {
     }, 3000);
   };
 
-  const removeBodyClasses =()=>{
-    document.body.classList.remove('bg-light')
-    document.body.classList.remove('bg-dark')
-    document.body.classList.remove('bg-success')
-    document.body.classList.remove('bg-danger')
-    document.body.classList.remove('bg-warning')
-  }
-
-  const toggleMode = (cls) => {
-    
-    removeBodyClasses()
-    document.body.classList.add('bg-'+cls)
+  
+  const toggleMode = () => {
     if (mode === "light") {
       setMode("dark");
       document.body.style.backgroundColor = "#042743";
@@ -55,8 +45,11 @@ function App() {
         <Alert alert={alert} />
         <div className="container my-3">
           <Routes>
-            <Route exact path='/about' element={<About mode={mode} />} />
-            <Route exact path='/' element={<TextForm heading="Try TextUtils - Word Counter, Character Counter, Remove extra Spaces" mode={mode} showAlert={showAlert} />} />
+            <Route exact path='/' element={<TextForm heading="Try TextUtils - Word Counter, Character Counter, Remove extra Spaces" mode={mode} showAlert={showAlert} />}></Route>
+            <Route exact path='/about' element={<About mode={mode} />}></Route>
+
+            {/* <Route exact path='/' element={<TextForm heading="Try TextUtils - Word Counter, Character Counter, Remove extra Spaces" mode={mode} showAlert={showAlert} />} ></Route>
+            <Route exact path='/about' element={<About mode={mode} />} ></Route> */}
           </Routes>
         </div>
       </Router> 
